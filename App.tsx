@@ -83,9 +83,10 @@ export default function App() {
 
       <Button title="Calcular" onPress={calcular} />
 
+      <Button  title="limpar" onPress={limpar} />
+      
       <Text style={styles.resultado}>Resultado: {resultado}</Text>
 
-      <Button title="limpar" onPress={limpar} />
       
 
     </View>
