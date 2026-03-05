@@ -18,6 +18,13 @@ export default function App() {
   const [operacao, setOperacao] = useState<Operacao>("+");
   const [resultado, setResultado] = useState("");
 
+  function limpar() {
+    setValor1("");
+    setValor2("");
+    setOperacao("+");
+    setResultado("");
+  }
+
   function calcular() {
     const n1 = Number(valor1.replace(",", "."));
     const n2 = Number(valor2.replace(",", "."));
@@ -77,6 +84,9 @@ export default function App() {
       <Button title="Calcular" onPress={calcular} />
 
       <Text style={styles.resultado}>Resultado: {resultado}</Text>
+
+      <Button title="limpar" onPress={limpar} />
+      
 
     </View>
   );
